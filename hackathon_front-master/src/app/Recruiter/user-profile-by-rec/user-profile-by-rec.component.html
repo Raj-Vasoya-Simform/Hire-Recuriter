@@ -1,0 +1,360 @@
+
+
+    <!-- LOADING AREA START ===== -->
+    <!-- <div class="loading-area">
+        <div class="loading-box"></div>
+        <div class="loading-pic">
+            <div class="wrapper">
+                <div class="cssload-loader"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- LOADING AREA  END ====== -->    
+
+	<div class="page-wraper">
+    
+        <header id="header-admin-wrap" class="header-admin-fixed">
+        
+            <!-- Header Start -->
+            <div id="header-admin">
+                <div class="container">
+                    
+                    <!-- Left Side Content -->
+                    <div class="header-left">
+                        <div class="nav-btn-wrap">
+                            <a class="nav-btn-admin" id="sidebarCollapse">
+                                <span class="fa fa-angle-left"></span>
+                            </a>                           
+                        </div>
+                    </div>
+                    <!-- Left Side Content End -->
+                    
+                    <!-- Right Side Content -->
+                    <div class="header-right">
+                        <ul class="header-widget-wrap">
+                            <!--Account-->
+                            <li class="header-widget">
+								<div class="dashboard-user-section">
+                                	<div class="listing-user">
+                                        <div class="dropdown">
+                                            <a href="javascript:;" class="dropdown-toggle" id="ID-ACCOUNT_dropdown" data-bs-toggle="dropdown">
+                                                <div class="user-name text-black">
+                                                    <span>
+                                                        <img src="../../../assets/images/user-avtar/pic4.jpg" alt="">
+                                                    </span>{{this.service.userName}}
+                                                </div> 
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="ID-ACCOUNT_dropdown">
+                                                  
+                                                <ul>
+                                                    <li><a><button (click)="this.service.onDashboard()" class="unstyled-button" ><i class="fa fa-home"></i>Dashboard</button></a></li>
+                                                    <li><a><button (click)="this.service.onMessage()" class="unstyled-button" ><i class="fa fa-envelope"></i> Messages</button></a></li>
+                                                    <!-- <li><a><button (click)="this.service.onProfile()" class="unstyled-button" ><i class="fa fa-envelope"></i> Profile</button></a></li> -->
+                                                    <li><a><button (click)="this.service.onLogout()" class="unstyled-button" ><i class="fa fa-envelope"></i> Logout</button></a></li>
+                                                    
+                                                </ul>
+                                                    
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>                                
+                               </div>
+
+                               
+
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Right Side Content End -->
+        
+                </div>
+            </div>
+            <!-- Header End -->
+        
+        </header>            
+    	
+        <!-- Sidebar Holder -->
+        <nav id="sidebar-admin-wraper">
+            <div class="page-logo">
+                <a><img src="../../../assets/images/Hirecruit2-removebg-preview.png" alt=""></a>
+            </div>
+            
+            <div class="admin-nav scrollbar-macosx">
+                <ul>
+                    <li >
+                        <a (click)="this.service.onDashboard()" role="button"><i class="fa fa-home"></i><span class="admin-nav-text">Dashboard</span></a>
+                    </li>
+
+                    <li >
+                        <a (click)="this.service.onComapanyProfile()" role="button"><i class="fa fa-user-tie"></i><span class="admin-nav-text">College Profile</span></a>
+                    </li>
+                    <li>
+                        <a (click)="this.service.AddProfessorData()" role="button" href="javascript:;" data-bs-toggle="modal" data-bs-target="#logout-dash-profile"><i class="fa fa-share-square"></i><span class="admin-nav-text">Add Professor Details</span></a>
+                    </li> 
+                    <li>
+                        <a (click)="this.service.onProfessorDetails()" role="button"><i class="fa fa-user-tie"></i><span class="admin-nav-text">Professor Details</span></a>
+                    </li>
+
+
+                    <li>
+                    	<!-- <a href="javascript:;"><i class="fa fa-suitcase"></i><span class="admin-nav-text">Jobs</span></a> -->
+                        <a (click)="this.service.onPostjob()" role="button"><i class="fa fa-suitcase"></i><span class="admin-nav-text">Post a New Jobs</span></a>
+                         <a (click)="this.service.onManagejob()" role="button"><i class="fa fa-suitcase"></i><span class="admin-nav-text">Manage Jobs</span></a>
+                        <!-- <ul class="sub-menu"> -->
+                        	<!-- <li> <a (click)="this.service.onPostjob()" role="button"><span class="admin-nav-text">Post a New Jobs</span></a></li>
+                        	<li> <a (click)="this.service.onManagejob()" role="button"><span class="admin-nav-text">Manage Jobs</span></a></li> -->
+                        <!-- </ul> -->
+                    </li>
+                    <li class="active">
+                        <a (click)="this.service.onCandidateDetails()" role="button"><i class="fa fa-user-friends"></i><span class="admin-nav-text">Candidates</span></a>
+                    </li> 
+                    <li>
+                        <a (click)="this.service.onMessage()" role="button"><i class="fa fa-envelope"></i><span class="admin-nav-text">See All Messages</span></a>
+                    	<!-- <a href="javascript:;"><i class="fa fa-envelope"></i><span class="admin-nav-text">Messages <sup class="twm-msg-noti">5</sup></span></a> -->
+                        <!-- <ul class="sub-menu"> -->
+                        	<!-- <li> </li> -->
+                        <!-- </ul> -->
+                    </li>
+                    <li>
+                        <!-- <a (click)="this.service.onProfile()" role="button"><i class="fa fa-user"></i><span class="admin-nav-text">My Profile</span></a> -->
+                    </li>
+
+                    <li>
+                        <a (click)="this.service.onChangePassword()" role="button"><i class="fa fa-fingerprint"></i><span class="admin-nav-text">Change Password</span></a>
+                    </li>                    
+                                       
+                    <li>
+                        <a (click)="this.service.onLogout()" role="button" href="javascript:;" data-bs-toggle="modal" data-bs-target="#logout-dash-profile"><i class="fa fa-share-square"></i><span class="admin-nav-text">Logout</span></a>
+                    </li>                    
+                    
+                </ul>
+            </div>   
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <div class="content-admin-main">
+
+                <div class="wt-admin-right-page-header clearfix">
+                    <h2>Hello, {{this.service.userName}}</h2>
+                    <div class="breadcrumbs"><a href="#">Home</a><span>Job Details</span></div>
+                </div>
+                
+
+                <!--  -->
+                <div class="section-full  p-t10 p-b90 bg-white">
+                    <div class="container">
+                    
+                        <!-- BLOG SECTION START -->
+                        <div class="section-content">
+                            <div class="row d-flex justify-content-center">
+                            
+                                <div class="col-lg-8 col-md-12">
+                                    <!-- Candidate detail START -->
+                                    <div class="cabdidate-de-info">
+                                        <div class="twm-job-self-wrap">
+                                            <div class="twm-job-self-info">
+                                                <div class="twm-job-self-top">
+                                                   
+                                                    
+                                                    <div class="twm-mid-content">
+    
+                                                        <!-- <h4 class="twm-job-title">{{jobData.jobTitle}} <span class="twm-job-post-duration">/ 1 days ago</span></h4> -->
+                                                        <!-- <p class="twm-job-address"><i class="feather-map-pin"></i>{{jobData.Address}}</p> -->
+                                                        <div class="twm-job-self-mid">
+                                                            <div class="twm-job-self-mid-left">
+                                                                <!-- <a href="" class="twm-job-websites site-text-primary">{{jobData.website}}</a> -->
+                                                                <!-- <div class="twm-jobs-amount">$2000 - $2500 <span>/ Month</span></div> -->
+                                                            </div>
+                                                            
+                                                        </div>
+    
+                                                        <div class="twm-job-self-bottom">
+                                                            <!-- <a   data-bs-toggle="modal" data-bs-target="#delete-dash-profile" class="site-button">Apply Now</a> -->
+                                                        </div>
+                                                
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+    
+                                        <h4 class="twm-s-title">Name:  {{CandidateInfo.name}}</h4>
+                                        <h4 class="twm-s-title">Stream:  {{CandidateInfo.streamName}}</h4>
+                                        <h4 class="twm-s-title" href="">Resume Link:  {{CandidateInfo.resume}}</h4>
+                                        <h4 class="twm-s-title" >Preffered Subjects:  {{CandidateInfo.subjects}}</h4>
+                                        <h4 class="twm-s-title" >Current Address:  {{CandidateInfo.address}}</h4>
+                                        <h4 class="twm-s-title" >Total Experience:  {{CandidateInfo.experience}}</h4>
+                                        
+
+                                        
+                                        <div class="widget tw-sidebar-tags-wrap">
+                                            <h4 class="section-head-small mb-4">Job Skills:</h4>
+                                            
+                                            <div class="tagcloud">
+                                                <a href="javascript:void(0)">DSA</a>
+                                                <a href="javascript:void(0)">Python</a>
+                                                <a href="javascript:void(0)">DBMS</a>                                            
+                                                <a href="javascript:void(0)">JavaScript</a>
+                                                <a href="javascript:void(0)">Angular</a>
+                                                
+                                            </div>
+                                        </div> 
+                                      
+                                        <!-- Example single danger button -->
+                                        <div class="twm-jobs-category">
+                                            <h4>
+                                                Current Application Status
+                                                <span [ngClass]="{'twm-bg-green': currentStatus?.name == 'Approved', 'twm-bg-red' : currentStatus?.name == 'Rejected', 'twm-bg-golden' : currentStatus?.name == 'Pending' }">{{currentStatus?.name}}</span>
+                                            </h4>
+                                        </div>
+ 
+ 
+ 
+                                        <h4>
+                                            Select Application status
+                                        </h4>
+                                        <div class="btn-group">
+                                        <button type="button" 
+                                        class="btn btn-danger dropdown-toggle" 
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Action
+                                        </button>
+                                        <div class="dropdown-menu" >
+                                            <a class="dropdown-item" *ngFor="let data of statusName" (click)="statusUpdate(data.id)">{{data.name}}</a>
+                                        </div>
+                                        </div>
+                                        <div class="mt-2">
+
+                                            <!-- <button class="btn btn-primary">Update Application Status</button> -->
+                                        </div>
+                                        
+    
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-4 col-md-12 rightSidebar">
+    
+                                    <div class="side-bar mb-4">
+                                        <div class="twm-s-info2-wrap mb-5">
+                                            <div class="twm-s-info2">
+                                                <h4 class="section-head-small mb-4">Candidate Information</h4>
+                                                
+                                                <ul class="twm-job-hilites2">
+        
+                                                   
+                                                    <li>
+                                                        <div class="twm-s-info-inner">
+                                                            <i class="fas fa-user-tie"></i>
+                                                            <span class="twm-title">Contact Details</span>
+                                                            <div class="twm-s-info-discription">+91 {{CandidateInfo.contact}}</div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="twm-s-info-inner">
+                                                            <i class="fas fa-map-marker-alt"></i>
+                                                            <span class="twm-title">Email</span>
+                                                            <div class="twm-s-info-discription">{{CandidateInfo.email}}</div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="twm-s-info-inner">
+                                                            <i class="fas fa-map-marker-alt"></i>
+                                                            <span class="twm-title">linkedin Profile</span>
+                                                            <div class="twm-s-info-discription">{{CandidateInfo.linkdin}}</div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="twm-s-info-inner">
+                                                            <i class="fas fa-map-marker-alt"></i>
+                                                            <span class="twm-title">Facebook Profile</span>
+                                                            <div class="twm-s-info-discription">{{CandidateInfo.fb}}</div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="twm-s-info-inner">
+                                                            <i class="fas fa-map-marker-alt"></i>
+                                                            <span class="twm-title">Twitter Profile</span>
+                                                            <div class="twm-s-info-discription">{{CandidateInfo.twitter}}</div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+        
+                                        
+    
+                                    </div>
+    
+                                    
+    
+                                    
+        
+        
+                                </div>
+                            
+                            </div>
+                                                    
+                        </div>
+                        
+                    </div>
+                    
+                </div> 
+
+                
+                  
+                                                      
+            </div>
+
+    	</div>
+
+         
+
+
+        <!--Logout Profile Popup-->
+        <div class="modal fade twm-model-popup" id="logout-dash-profile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Do you want to Logout your profile?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="site-button" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="site-button outline-primary">Yes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+          
+
+	</div>
+
+
+            <!--Apply job Profile Popup-->
+            <div class="modal fade twm-model-popup" id="delete-dash-profile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="modal-title">Are you sure to apply for this job</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="site-button" data-bs-dismiss="modal">No</button>
+                        <!-- <button type="button" class="site-button outline-primary" (click)="ApplyNow()">Yes</button> -->
+                    </div>
+                </div>
+                </div>
+            </div>
